@@ -36,7 +36,14 @@
     font-style: normal;
   }
 
-.font-sofia-sans {
+.font-sofia-sans-condenced {
+    font-family: "Sofia Sans", serif;
+    font-optical-sizing: auto; 
+    font-style: normal;
+    letter-spacing: 0px;
+  }
+
+  .font-sofia-sans {
     font-family: "Sofia Sans", serif;
     font-optical-sizing: auto; 
     font-style: normal;

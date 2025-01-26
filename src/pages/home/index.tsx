@@ -5,8 +5,7 @@ import { FeatureSection } from '../../components/home/features';
 function Home() {
   return (
     <>
-      <HeroSection /> 
-      <FoodGrid />
+      <HeroSection />  
       <FeatureSection />
     </>
   );

@@ -17,7 +17,7 @@ export function Navigation() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-64 min-h-screen bg-white p-8 flex flex-col max-md:hidden md:flex">
+      <nav className="absolute top-0 left-0 w-64 min-h-screen bg-white p-8 flex flex-col max-md:hidden md:flex">
         <div className="mb-12 ml-4 mt-8">
           <img src={Logo} alt="Chow logo" />
         </div>

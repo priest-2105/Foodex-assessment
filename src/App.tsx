@@ -5,7 +5,6 @@ import Layout from './components/layout/index';
 
 function App() {
   
-
   return (
     <>
     <Layout>
