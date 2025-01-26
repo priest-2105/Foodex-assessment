@@ -1,13 +1,13 @@
 import { FoodGrid } from '../../components/home/food-grid';
-import { HeroSection } from '../../components/home/hero-section';
-import { WaitlistForm } from '../../components/home/waitlist-form';
+import { HeroSection } from '../../components/home/hero-section'; 
+import { FeatureSection } from '../../components/home/features'; 
 
 function Home() {
   return (
     <>
-      <HeroSection />
-      <WaitlistForm />
+      <HeroSection /> 
       <FoodGrid />
+      <FeatureSection />
     </>
   );
 }

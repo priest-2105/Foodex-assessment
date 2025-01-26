@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Pangram';
+  src: url('./src/assets/fonts/pangram/Pangram-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP_Model';
+  src: url('./src/assets/fonts/ppmodel/PPModelPlasticLine-SuperItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-model{
+    font-family: 'PP_Model', sans-serif;
+}
+
+.font-pangram{
+    font-family: 'Pangram', serif;
+}
+
+.font-pangram-stretched{
+    letter-spacing: 1px;
+    font-family: 'Pangram', serif;
+}
+
+.font-courgette {
+    font-family: "Courgette", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.font-sofia-sans {
+    font-family: "Sofia Sans", serif;
+    font-optical-sizing: auto; 
+    font-style: normal;
+    letter-spacing: 1px;
+  }

@@ -1,0 +1,12 @@
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animated-line path {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: none;
+}
+
