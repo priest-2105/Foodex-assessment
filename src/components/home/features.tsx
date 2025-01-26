@@ -1,11 +1,9 @@
-import { Check } from "lucide-react";
 import GemIcon from "@/assets/icons/gem"
 import Cloud from "@/assets/vectors/cloud"
 import WideCloud from "@/assets/vectors/wide-cloud"
 import FeatureSectionImage from "@/assets/img/emmanuel-ikwuegbu-81fRHbVliQI-unsplash 1.png"
-import PriceTag from "@/components/home/pricetag"
-import GreenTag from "@/components/home/greentag"
 import { FoodGrid } from "./food-grid";
+import FeaturesBackground from "@/assets/img/features-background.png"
 
 const tagsData = [
   { icon: '👍🏾', text: "Picked by 314 people today" },
@@ -48,16 +46,16 @@ export function FeatureSection() {
 
         {/* Features Grid */}
         <div className="md:ml-64 px-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center mt-16 mx-auto  bg-[#FFF8F2] p-6">
+        <div className={`grid lg:grid-cols-2 gap-12 items-center mt-16 mx-auto bg-no-repeat bg-center bg-cover p-8`} style={{ backgroundImage: `url(${FeaturesBackground})` }}>
           {/* Left Side - Food Grid */}
            <FoodGrid/>
 
           {/* Right Side - Image and Features */}
-          <div className="relative w-fit">
+          <div className="relative justify-center w-fit text-center">
             <img
               src={FeatureSectionImage}
               alt="Person using phone"
-              className="rounded-2xl w-[397px]"
+              className="rounded-2xl w-[397px] text-center ml-auto"
             />
 
             {/* Feature Pills */}
