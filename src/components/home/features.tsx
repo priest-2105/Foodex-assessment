@@ -5,11 +5,12 @@ import WideCloud from "@/assets/vectors/wide-cloud"
 import FeatureSectionImage from "@/assets/img/emmanuel-ikwuegbu-81fRHbVliQI-unsplash 1.png"
 import PriceTag from "@/components/home/pricetag"
 import GreenTag from "@/components/home/greentag"
+import { FoodGrid } from "./food-grid";
 
 const tagsData = [
-  { icon: <Check className="w-4 h-4" />, text: "Picked by 214 people today" },
-  { icon: <Check className="w-4 h-4" />, text: "Exclude onions" },
-  { icon: <Check className="w-4 h-4" />, text: "Must include turkey" },
+  { icon: '👍🏾', text: "Picked by 314 people today" },
+  { icon: '🧅', text: "Exclude onions" },
+  { icon: '🥩', text: "Must include turkey" },
 ];
 
 export function FeatureSection() {
@@ -49,16 +50,7 @@ export function FeatureSection() {
         <div className="md:ml-64 px-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center mt-16 mx-auto  bg-[#FFF8F2] p-6">
           {/* Left Side - Food Grid */}
-          <div className="grid grid-cols-3 gap-4">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div
-                key={i}
-                className="aspect-square bg-white rounded-2xl shadow-sm p-2 flex items-center justify-center"
-              >
-                <img src="/placeholder.svg" alt="Food item" className="w-full h-full object-cover rounded-xl" />
-              </div>
-            ))}
-          </div>
+           <FoodGrid/>
 
           {/* Right Side - Image and Features */}
           <div className="relative w-fit">
@@ -69,8 +61,20 @@ export function FeatureSection() {
             />
 
             {/* Feature Pills */}
-            <div className="absolute top-4 -right-4 flex flex-col gap-2">
-              <PriceTag/>
+            <div className="absolute top-30 -right-26 flex flex-col gap-2">
+              <div
+              className={`
+                bg-[#DB7023] text-white px-4 py-2 rounded-lg border-2 border-white 
+                block items-center gap-4 shadow-lg 
+              `}
+            >
+              <div className="bg-[#77441E] w-fit text-[9px]  p-1 mb-1 rounded-full">
+                💵
+              </div>
+              <p className="text-[9px] font-medium">
+              You can buy all for<span className="text-[#2EE6A8]  font-bold"> N2,500</span>  at Yaba
+              </p>
+            </div>
             </div>
 
             <div className="absolute bottom-14 -left-4 flex flex-col gap-2">
@@ -79,22 +83,18 @@ export function FeatureSection() {
                  <div
                  className={`
                    bg-[#009F79] text-white px-4 py-2 rounded-lg border-2 border-white 
-                   flex items-center gap-4 shadow-lg ml-[${index * 100}px]
+                   flex items-center gap-4 shadow-lg mt-[${index * 100}px]
                  `}
                >
-                 <div className="bg-[#1E735E] w-fit text-xs p-1 mb-1 rounded-full">
+                 <div className="bg-[#1E735E] w-fit text-[9px]  p-1 mb-1 rounded-full">
                  {tag.icon}
                  </div>
-                 <p className="text-xs font-medium"> {tag.text}
+                 <p className="text-[9px] font-medium"> {tag.text}
                  </p>
                </div>
               ))}
             </div>
-
-            {/* Price Tag */}
-            <div className="absolute bottom-8 right-[-20px] bg-[#E67E22] text-white px-6 py-3 rounded-lg">
-              You can buy all for <span className="font-bold">₦5000</span> at Yaba
-            </div>
+ 
           </div>
         </div>
         </div>
