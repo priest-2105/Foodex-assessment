@@ -88,7 +88,7 @@ export function HeroSectionFoodList() {
     slidesToShow: 4.5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
     centerMode: true,
     centerPadding: "20px",
@@ -101,16 +101,16 @@ export function HeroSectionFoodList() {
         <div className="p-2">
         <div
             key={item.id}
-            className="bg-white py-6 rounded-2xl text-start px-4 cursor-pointer transition-all duration-300"
+            className="bg-white py-2 rounded-xl text-start px-2 cursor-pointer transition-all duration-300"
           >
-            <div className="flex justify-center mb-4">
-              <div className="relative w-32 h-32 rounded-full overflow-hidden border-8 border-white shadow-inner">
+            <div className="flex justify-center rounded-xl bg-[#d6d5ca44] mb-4">
+              <div className="relative w-32 h-32 rounded-full overflow-hidde py-2">
                 <img src={item.image || "@/assets/img/Home-new-01.png"} alt={item.name} className="object-cover w-full h-full" />
               </div>
             </div>
-            <h3 className="font-bold text-sm mb-1 text-start font-pangram line-clamp-2">{item.name}</h3>
+            <h3 className="font-bold py-1 text-sm mb-1 text-start font-pangram line-clamp-2">{item.name}</h3>
             <span className="text-[#49280F] py-1 px-2 text-[8px] rounded-full h-fit bg-[#D6D5CA] text-start ml-0 font-pangram">🍲 Continental</span>
-            <div className="flex justify-between items-center text-xs h-fit mt-2 text-gray-600 mb-3">
+            <div className="flex py-1 justify-between items-center text-xs h-fit mt-2 text-gray-600 mb-3">
               <div className="flex items-center gap-1 h-max">
                 <ThumbsUp className="w-3 h-3" />
                 <span className="font-sofia-sans -mb-1">{item.duration}</span>
