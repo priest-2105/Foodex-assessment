@@ -2,30 +2,35 @@ import { ThumbsUp } from "lucide-react";
 import Slider from "react-slick";
 import type { FoodItem } from "@/types/food";
 import productImage from "@/assets/img/Home-new-01.png";
+import productImageOne from "@/assets/img/image (3).png";
+import productImageTwo from "@/assets/img/image (2).png";
+import productImageThree from "@/assets/img/image (1).png";
+import productImageFive from "@/assets/img/e4e2604d03796a699fa8505fbd92d350-removebg-preview.png";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const foodItems: FoodItem[] = [
   {
     id: 1,
-    name: "Naija Special Fried Rice with Shrimps",
-    image: productImage,
+    name: "Pasta, Green Sauce & Kpomo",
+    image: productImageOne,
     price: "₦3,000",
     duration: "25mins",
     isHighlighted: true,
   },
   {
     id: 2,
-    name: "Naija Special Fried Rice with Shrimps",
-    image: productImage,
+    name: "Egg-cooked Fried Rice & Peas",
+    image: productImageTwo,
     price: "₦3,000",
     duration: "25mins",
     isHighlighted: false,
   },
   {
     id: 3,
-    name: "Naija Special Fried Rice with Shrimps",
-    image: productImage,
+    name: "Shredded Roasted Chicken",
+    image: productImageThree,
     price: "₦3,000",
     duration: "25mins",
     isHighlighted: false,
@@ -40,40 +45,8 @@ const foodItems: FoodItem[] = [
   },
   {
     id: 5,
-    name: "Calabar Asun & Gravy Sauce",
-    image: productImage,
-    price: "₦3,000",
-    duration: "25mins",
-    isHighlighted: true,
-  },
-  {
-    id: 6,
-    name: "Naija Special Fried Rice with Shrimps",
-    image: productImage,
-    price: "₦3,000",
-    duration: "25mins",
-    isHighlighted: false,
-  },
-  {
-    id: 7,
-    name: "Naija Special Fried Rice with Shrimps",
-    image: productImage,
-    price: "₦3,000",
-    duration: "25mins",
-    isHighlighted: false,
-  },
-  {
-    id: 8,
-    name: "Naija Special Fried Rice with Shrimps",
-    image: productImage,
-    price: "₦3,000",
-    duration: "25mins",
-    isHighlighted: false,
-  },
-  {
-    id: 9,
-    name: "Shredded Roasted Chicken",
-    image: productImage,
+    name: "Souse Fries & Bacon",
+    image: productImageFive,
     price: "₦3,000",
     duration: "25mins",
     isHighlighted: true,
