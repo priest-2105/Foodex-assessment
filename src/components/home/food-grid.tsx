@@ -1,4 +1,4 @@
-import { Heart, Share2, Clock, ThumbsUp } from "lucide-react"
+import { ThumbsUp } from "lucide-react"
 import type { FoodItem } from "@/types/food"
 import productImage from "@/assets/img/Home-new-01.png"
 

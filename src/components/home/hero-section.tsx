@@ -3,6 +3,7 @@ import { WaitlistForm } from "./waitlist-form";
 import GemIcon from "@/assets/icons/gem";
 import AnimatedLine from "@/components/home/animatedline/animatedLine"
 import { Navigation } from "./navigation";
+import { HeroSectionFoodList } from "./heroSectionfoodlist";
 
 
 export function HeroSection() {
@@ -11,9 +12,10 @@ export function HeroSection() {
     <Navigation/>
    <div className="md:ml-64 p-8"> 
     <div 
-      className="relative text-center rounded-2xl py-24 bg-cover bg-center"
+      className="relative text-center rounded-2xl h-fit py-24 bg-cover bg-center"
       style={{ backgroundImage: `url(${BackgroundImage})` }}
     >
+      <div className="pb-18">
       <div className="relative z-10 pt-16">
         <div className="flex items-center justify-center space-x-3 mb-2">
           <span className="text-white text-2xl">
@@ -40,6 +42,8 @@ export function HeroSection() {
         </p>
       </div>
       <WaitlistForm />
+      </div>
+      <HeroSectionFoodList/>
     </div>
     </div>
     </>
