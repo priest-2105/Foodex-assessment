@@ -1,7 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import type { SVGProps } from "react";
+import { useInView } from "react-intersection-observer"; 
 import GemIcon from "../../assets/icons/gem";
 import Cloud from "../../assets/vectors/cloud";
 import WideCloud from "../../assets/vectors/wide-cloud";
