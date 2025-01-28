@@ -59,21 +59,21 @@ export function FeatureSection() {
         </div>
 
         {/* Features Grid */}
-        <div className="lg:ml-64 md:px-24">
-        <div className={`grid lg:grid-cols-2 gap-12 items-center mt-16 mx-auto bg-no-repeat bg-center bg-cover p-8`} style={{ backgroundImage: `url(${FeaturesBackground})` }}>
+        <div className="xl:ml-64 md:px-24">
+        <div className={`grid xl:grid-cols-2 gap-12 items-center mt-16 mx-auto bg-no-repeat bg-center bg-cover p-8`} style={{ backgroundImage: `url(${FeaturesBackground})` }}>
           {/* Left Side - Food Grid */}
            <FoodGrid/>
 
           {/* Right Side - Image and Features */}
-          <div className="relative justify-center w-fit text-center">
+          <div className="relative justify-center w-fit  mx-auto text-center">
             <img
               src={FeatureSectionImage}
               alt="Person using phone"
-              className="rounded-2xl w-[397px] text-center ml-auto"
+              className="rounded-2xl w-[397px] text-center md:ml-auto mx-auto"
             />
 
             {/* Feature Pills */}
-            <div className="absolute top-30 -right-26 flex flex-col gap-2">
+            <div className="absolute top-30 -right-26 max-md:-right-4 flex flex-col gap-2">
               <div
               className={`
                 bg-[#DB7023] text-white px-4 py-2 rounded-lg border-2 border-white 
