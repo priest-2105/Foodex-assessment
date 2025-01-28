@@ -12,4 +12,8 @@ export default defineConfig({
         },
     },
     assetsInclude: ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.svg"],
+    build: {
+        outDir: "dist",
+        sourcemap: true,
+      },
 });
