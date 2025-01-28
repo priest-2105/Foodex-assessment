@@ -1,5 +1,5 @@
 import type React from "react"
-import AnimatedLine from "../components/AnimatedLine"
+import AnimatedLine from "@/components/animatedLine/animatedLine"
 
 const AnimationDemo: React.FC = () => {
   return (
