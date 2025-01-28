@@ -4,11 +4,11 @@ interface GoodbyeCardProps {
   
   export function GoodbyeCard({ className }: GoodbyeCardProps) {
     return (
-      <div className={`flex w-full md:ml-auto md:pl-46 pr-24 mx-auto py-6`}>
+      <div className={`flex w-full ml-auto lg:pl-46 ;lg:pr-24 max-lg:mr-auto max-lg:mx-5 mx-auto py-6`}>
 
-      <div className={`flex shadow-2xl border-1  border-[#EDEFFC] p-8 rounded-2xl items-center justify-between w-full font-pangram font-bold ${className}`}>
-        <div className="flex items-center gap-2 text-[32px] py-6 font-pangram">
-          <span>
+      <div className={`flex max-lg:inline-block  max-lg:w-full shadow-2xl border-1  border-[#EDEFFC] p-8 rounded-2xl items-center justify-between w-full font-pangram font-bold ${className}`}>
+        <div className="flex items-center gap-2 text-[32px] max-lg:text-5xl max-md:text-4xl max-md:inline-block  py-6 font-pangram">
+          <span className="max-md:block ">
             Signup to
           <span className="bg-[#5F63E1] my-1 mx-1 text-white font-medium h-fit border-2 border-[#000] px-4 py-1 rounded-full">chowafrica</span>
             and say
@@ -17,7 +17,7 @@ interface GoodbyeCardProps {
             </span>
         </div>
   
-        <button className="bg-[#009F79] hover:bg-[#008F69] font-sofia-sans rounded-full shadow-xl border-2 border-[#FFFFFF] transition-colors text-white px-10 py-4 font-medium cursor-pointer">
+        <button className="bg-[#009F79] hover:bg-[#008F69] font-sofia-sans rounded-full shadow-xl border-2 border-[#FFFFFF] transition-colors text-white px-10 py-4 font-medium cursor-pointer mt-4">
           JOIN WAITLIST
         </button>
         </div>

@@ -1,5 +1,4 @@
-import type React from "react"
-import { useEffect, useRef } from "react"
+import React, { useEffect, useRef } from "react"
 import "./animatedLine.css"
 
 const AnimatedLine: React.FC = () => {
@@ -16,10 +15,10 @@ const AnimatedLine: React.FC = () => {
 
   return (
     <svg
-      className="-mt-2"
-      width="268"
+      className="w-48 max-md:mt-0 max-sm:w-20 max-md:w-30 max-lg:w-40 -mt-2"
       height="12"
       viewBox="0 0 268 12"
+      preserveAspectRatio="none"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -34,4 +33,3 @@ const AnimatedLine: React.FC = () => {
 }
 
 export default AnimatedLine
-

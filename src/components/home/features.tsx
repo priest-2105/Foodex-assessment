@@ -27,25 +27,39 @@ export function FeatureSection() {
         </div>
 
         {/* Main Content */}
-        <div className="text-center mb-8 relative">
-          <h2 className="text-[#353542] text-6xl font-pangram font-bold mb-4">
+        <div className="text-center mb-8 relative max-lg:hidden">
+        <div className="absolute bottom-0 left-20 z-0 max-lg:-left-50 max-lg:bottom-20"><WideCloud/></div>
+          <div className="absolute bottom-0 right-0 z-0  max-lg:-left-50 max-lg:bottom-20"><Cloud/></div>
+                    <h2 className="text-[#353542] text-6xl font-pangram font-bold mb-4 z-10">
             tired of eating the
           </h2>
-           <div className="inline-block relative">
+           <div className="inline-block relative z-10">
               <span className="relative z-10 bg-[#E67E22] border-black border-4 text-white text-4xl px-8 py-2 font-sofia-sans rounded-full">
               🍛 same dishes everyday? 🍝
               </span>
             </div>
-          <p className="text-black max-w-xl my-12 font-semibold text-lg font-sofia-sans-condenced mx-auto">
+          <p className="text-black max-w-xl my-12 font-semibold text-lg font-sofia-sans-condenced mx-auto z-10">
             Do you crave new and exciting dishes? Look no further! Chow is the perfect solution for discovering your
             next dish.
           </p>
-          <div className="absolute bottom-0 left-20"><WideCloud/></div>
-          <div className="absolute bottom-0 right-0"><Cloud/></div>
+        </div>
+        <div className="text-center mb-8 relative max-lg:block lg:hidden">
+        <div className="absolute bottom-0 left-20 z-0 max-lg:-left-50 max-lg:bottom-20"><WideCloud/></div>
+          <div className="absolute bottom-0 right-0 z-0  max-lg:-left-50 max-lg:bottom-20"><Cloud/></div>
+                    <h2 className="text-[#353542] text-6xl max-lg:text-3xl font-pangram font-bold mb-4 z-10">
+            tired of eating the same dishes 
+             <span className="relative z-10 bg-[#E67E22] border-black border-4 text-white text-4xl px-8 py-2 font-sofia-sans rounded-full max-lg:mx-2 max-lg:text-3xl max-md:text-2xl max-sm:text-lg">
+               everyday? 
+              </span>
+          </h2>
+          <p className="text-black max-w-xl my-12 font-semibold text-lg font-sofia-sans-condenced mx-auto z-10 max-sm:px-4 max-lg:px-8">
+            Do you crave new and exciting dishes? Look no further! Chow is the perfect solution for discovering your
+            next dish.
+          </p>
         </div>
 
         {/* Features Grid */}
-        <div className="md:ml-64 px-24">
+        <div className="lg:ml-64 md:px-24">
         <div className={`grid lg:grid-cols-2 gap-12 items-center mt-16 mx-auto bg-no-repeat bg-center bg-cover p-8`} style={{ backgroundImage: `url(${FeaturesBackground})` }}>
           {/* Left Side - Food Grid */}
            <FoodGrid/>
