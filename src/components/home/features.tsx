@@ -1,9 +1,9 @@
 import GemIcon from "@/assets/icons/gem"
 import Cloud from "@/assets/vectors/cloud"
 import WideCloud from "@/assets/vectors/wide-cloud"
-import FeatureSectionImage from "@/assets/img/emmanuel-ikwuegbu-81fRHbVliQI-unsplash 1.png"
+import featureImage from "@/assets/img/emmanuel-ikwuegbu-81fRHbVliQI-unsplash-1.png"
 import { FoodGrid } from "./food-grid";
-import FeaturesBackground from "@/assets/img/features-background.png"
+import backgroundImage from "@/assets/img/features-background.png"
 
 const tagsData = [
   { icon: '👍🏾', text: "Picked by 314 people today" },
@@ -13,14 +13,14 @@ const tagsData = [
 
 export function FeatureSection() {
   return (
-    <section className="relative py-28 overflow-hidden">
+    <section className="relative py-24 overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 to-transparent" />
 
       {/* Content Container */}
-      <div className="relative z-10  mx-auto py-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="flex items-center justify-center space-x-3 mb-8">
+        <div className="flex items-center justify-center space-x-3 mb-12">
           <span className="text-black text-2xl"><GemIcon className="w-4 h-4" /></span>
           <span className="uppercase tracking-[0.2em] text-sm font-pangram  font-medium">JOIN THE CHOWAFRICA WAITLIST</span>
           <span className="text-black text-2xl"><GemIcon className="w-4 h-4" /></span>
@@ -60,14 +60,14 @@ export function FeatureSection() {
 
         {/* Features Grid */}
         <div className="xl:ml-64 md:px-24">
-        <div className={`grid xl:grid-cols-2 gap-12 items-center mt-16 mx-auto bg-no-repeat bg-center bg-cover p-8`} style={{ backgroundImage: `url(${FeaturesBackground})` }}>
+        <div className={`grid xl:grid-cols-2 gap-12 items-center mt-16 mx-auto bg-no-repeat bg-center bg-cover p-8`} style={{ backgroundImage: `url(${backgroundImage})` }}>
           {/* Left Side - Food Grid */}
            <FoodGrid/>
 
           {/* Right Side - Image and Features */}
           <div className="relative justify-center w-fit  mx-auto text-center">
             <img
-              src={FeatureSectionImage}
+              src={featureImage}
               alt="Person using phone"
               className="rounded-2xl w-[397px] text-center md:ml-auto mx-auto"
             />
