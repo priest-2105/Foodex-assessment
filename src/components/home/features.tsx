@@ -73,7 +73,7 @@ export function FeatureSection() {
             />
 
             {/* Feature Pills */}
-            <div className="absolute top-30 -right-26 max-md:-right-4 flex flex-col gap-2">
+            <div className="absolute top-30 -right-26 max-md:-right-4 max-md:top-20 flex flex-col gap-2">
               <div
               className={`
                 bg-[#DB7023] text-white px-4 py-2 rounded-lg border-2 border-white 

@@ -1,0 +1,55 @@
+@media (min-width: 1280px) and (max-width: 1700px) {
+    .custom-range\:rounded-lg {
+      border-radius: 0.5rem;
+    }
+    .custom-range\:p-2 {
+      padding: 0.5rem;
+    }
+    .custom-range\:mb-2 {
+      margin-bottom: 0.5rem;
+    }
+    .custom-range\:w-16 {
+      width: 4rem;
+    }
+    .custom-range\:h-16 {
+      height: 4rem;
+    }
+    .custom-range\:border-4 {
+      border-width: 4px;
+    }
+    .custom-range\:text-xs {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+    .custom-range\:py-0\.5 {
+      padding-top: 0.125rem;
+      padding-bottom: 0.125rem;
+    }
+    .custom-range\:px-1 {
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+    .custom-range\:text-\[6px\] {
+      font-size: 6px;
+    }
+    .custom-range\:text-\[8px\] {
+      font-size: 8px;
+    }
+    .custom-range\:mt-1 {
+      margin-top: 0.25rem;
+    }
+    .custom-range\:mb-1 {
+      margin-bottom: 0.25rem;
+    }
+    .custom-range\:gap-0\.5 {
+      gap: 0.125rem;
+    }
+    .custom-range\:w-2 {
+      width: 0.5rem;
+    }
+    .custom-range\:h-2 {
+      height: 0.5rem;
+    }
+  }
+  
+  
