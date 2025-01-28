@@ -70,24 +70,28 @@ export function HeroSectionFoodList() {
         breakpoint: 1204,
         settings: {
           slidesToShow: 3,
+          centerPadding: "5%",
         },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
+          centerPadding: "5%",
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          centerPadding: "5%",
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          centerPadding: "5%",
         },
       },
     ],

@@ -13,14 +13,14 @@ const tagsData = [
 
 export function FeatureSection() {
   return (
-    <section className="relative py-28 overflow-hidden">
+    <section className="relative py-24 overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 to-transparent" />
 
       {/* Content Container */}
-      <div className="relative z-10  mx-auto py-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="flex items-center justify-center space-x-3 mb-8">
+        <div className="flex items-center justify-center space-x-3 mb-12">
           <span className="text-black text-2xl"><GemIcon className="w-4 h-4" /></span>
           <span className="uppercase tracking-[0.2em] text-sm font-pangram  font-medium">JOIN THE CHOWAFRICA WAITLIST</span>
           <span className="text-black text-2xl"><GemIcon className="w-4 h-4" /></span>

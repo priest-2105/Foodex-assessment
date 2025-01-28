@@ -1,6 +1,3 @@
-import React from "react"
-
-
 interface PriceTagProps {
     price: string
     location: string
