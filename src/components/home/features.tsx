@@ -1,26 +1,26 @@
-import { motion, useAnimation } from "framer-motion"
-import { useEffect } from "react"
-import { useInView } from "react-intersection-observer"
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import type { SVGProps } from "react";
-import GemIcon from "../../assets/icons/gem"
-import Cloud from "../../assets/vectors/cloud"
-import WideCloud from "../../assets/vectors/wide-cloud"
-import featureImage from "../../assets/img/emmanuel-ikwuegbu-81fRHbVliQI-unsplash 1.png"
-import { FoodGrid } from "./food-grid"
-import backgroundImage from "../../assets/img/features-background.png"
+import GemIcon from "../../assets/icons/gem";
+import Cloud from "../../assets/vectors/cloud";
+import WideCloud from "../../assets/vectors/wide-cloud";
+import featureImage from "../../assets/img/emmanuel-ikwuegbu-81fRHbVliQI-unsplash 1.png";
+import { FoodGrid } from "./food-grid";
+import backgroundImage from "../../assets/img/features-background.png";
 
 const tagsData = [
   { icon: "👍🏾", text: "Picked by 314 people today" },
   { icon: "🧅", text: "Exclude onions" },
   { icon: "🥩", text: "Must include turkey" },
-]
+];
 
 export function FeatureSection() {
-  const controls = useAnimation()
+  const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 1.0,  
-    triggerOnce: true,  
-  })
+    threshold: 1.0,
+    triggerOnce: true,
+  });
 
   useEffect(() => {
     if (inView) {
@@ -29,7 +29,6 @@ export function FeatureSection() {
       controls.start("hidden");
     }
   }, [controls, inView]);
-  
 
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -41,7 +40,7 @@ export function FeatureSection() {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   const greenTagVariants = {
     hidden: { opacity: 0, x: -50 },
@@ -54,7 +53,7 @@ export function FeatureSection() {
         ease: "easeOut",
       },
     }),
-  }
+  };
 
   const orangeTagVariants = {
     hidden: { opacity: 0, x: 50 },
@@ -66,7 +65,7 @@ export function FeatureSection() {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   return (
     <section className="relative py-24 overflow-hidden">
@@ -96,12 +95,12 @@ export function FeatureSection() {
         {/* Main Content */}
         <div className="text-center mb-8 relative" ref={ref}>
           <div className="text-center mb-8 relative max-lg:hidden">
-          <div className="absolute bottom-0 left-20 z-1 max-lg:-left-50 max-lg:bottom-20">
-            <WideCloud className="opacity-50 z-1" />
-          </div>
-          <div className="absolute bottom-0 right-0 z-1 max-lg:-left-50 max-lg:bottom-20">
-            <Cloud className="opacity-50 z-1" />
-          </div>
+            <div className="absolute bottom-0 left-20 z-1 max-lg:-left-50 max-lg:bottom-20">
+              <WideCloud />
+            </div>
+            <div className="absolute bottom-0 right-0 z-1 max-lg:-left-50 max-lg:bottom-20">
+              <Cloud />
+            </div>
             <motion.h2
               className="text-[#353542] text-6xl font-pangram font-bold mb-4 z-50"
               variants={textVariants}
@@ -132,10 +131,10 @@ export function FeatureSection() {
           </div>
           <div className="text-center mb-8 relative max-lg:block lg:hidden">
             <div className="absolute bottom-0 left-20 z-0 max-lg:-left-50 max-lg:bottom-20">
-              <WideCloud className="opacity-50" />
+              <WideCloud />
             </div>
             <div className="absolute bottom-0 right-0 z-0 max-lg:-left-50 max-lg:bottom-20">
-              <Cloud className="opacity-50" />
+              <Cloud />
             </div>
             <motion.h2
               className="text-[#353542] text-6xl max-lg:text-3xl font-pangram font-bold mb-4 z-10"
@@ -213,21 +212,6 @@ export function FeatureSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-
-declare module "../../assets/icons/gem" {
-  const content: React.FC<SVGProps<SVGSVGElement>>;
-  export default content;
-}
-
-declare module "../../assets/vectors/cloud" {
-  const content: React.FC<SVGProps<SVGSVGElement>>;
-  export default content;
-}
-
-declare module "../../assets/vectors/wide-cloud" {
-  const content: React.FC<SVGProps<SVGSVGElement>>;
-  export default content;
-}
