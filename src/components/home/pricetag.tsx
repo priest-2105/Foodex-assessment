@@ -25,5 +25,4 @@ interface PriceTagProps {
       </div>
     )
   }
-  
-   
+
