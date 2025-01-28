@@ -1,9 +1,9 @@
-import GemIcon from "@/assets/icons/gem"
-import Cloud from "@/assets/vectors/cloud"
-import WideCloud from "@/assets/vectors/wide-cloud"
-import featureImage from "@/assets/img/emmanuel-ikwuegbu-81fRHbVliQI-unsplash-1.png"
+import GemIcon from "../../assets/icons/gem"
+import Cloud from "../../assets/vectors/cloud"
+import WideCloud from "../../assets/vectors/wide-cloud"
+import featureImage from "../../assets/img/emmanuel-ikwuegbu-81fRHbVliQI-unsplash 1.png"
 import { FoodGrid } from "./food-grid";
-import backgroundImage from "@/assets/img/features-background.png"
+import backgroundImage from "../../assets/img/features-background.png"
 
 const tagsData = [
   { icon: '👍🏾', text: "Picked by 314 people today" },

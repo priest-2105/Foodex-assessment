@@ -1,13 +1,15 @@
-import { ThumbsUp } from "lucide-react";
-import Slider from "react-slick";
-import type { FoodItem } from "@/types/food";
-import productImageOne from "@/assets/img/image-3.png";
-import productImageTwo from "@/assets/img/image-2.png";
-import productImageThree from "@/assets/img/image-1.png";
-import productImageFive from "@/assets/img/e4e2604d03796a699fa8505fbd92d350-removebg-preview.png";
-import PhoneFrame from "@/assets/img/phone-frame.png";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { ThumbsUp } from "lucide-react"
+import Slider from "react-slick"
+import type { FoodItem } from "@/types/food"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
+// Import images
+import productImageFive from "@/assets/img/e4e2604d03796a699fa8505fbd92d350-removebg-preview.png"
+import productImageOne from "@/assets/img/image (3).png"
+import productImageTwo from "@/assets/img/image (2).png"
+import productImageThree from "@/assets/img/image (1).png"
+import PhoneFrame from "@/assets/img/phone-frame.png"
 
 const foodItems: FoodItem[] = [
   {
@@ -50,7 +52,7 @@ const foodItems: FoodItem[] = [
     duration: "25mins",
     isHighlighted: false,
   },
-];
+]
 
 export function HeroSectionFoodList() {
   const settings = {
@@ -95,11 +97,28 @@ export function HeroSectionFoodList() {
         },
       },
     ],
-  };
+  }
 
   return (
     <div className="relative">
-      <Slider {...settings} className="flex gap-4 items-end">
+      <style>{`
+        .slick-track {
+          display: flex !important;
+          align-items: flex-end !important;
+        }
+        .slick-slide {
+          height: inherit !important;
+          display: flex !important;
+          align-items: flex-end !important;
+        }
+        .slick-slide > div {
+          width: 100%;
+          display: flex;
+          align-items: flex-end;
+        }
+      `}</style>
+
+      <Slider {...settings}>
         {foodItems.map((item) => (
           <div className="p-2 flex items-end" key={item.id}>
             {item.isHighlighted ? (
