@@ -1,7 +1,7 @@
-import BackgroundImage from "@/assets/img/Frame-1000001650.png";
+import BackgroundImage from "../../assets/img/Frame 1000001650.png";
 import { WaitlistForm } from "./waitlist-form";
-import GemIcon from "@/assets/icons/gem";
-import AnimatedLine from "@/components/home/animatedline/animatedLine";
+import GemIcon from "../../assets/icons/gem";
+import AnimatedLine from "./animatedline/animatedLine";
 import { Navigation } from "./navigation";
 import { HeroSectionFoodList } from "./heroSectionfoodlist";
 
