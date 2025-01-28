@@ -1,7 +1,6 @@
 import { ThumbsUp } from "lucide-react";
 import Slider from "react-slick";
 import type { FoodItem } from "@/types/food";
-import productImage from "@/assets/img/Home-new-01.png";
 import productImageOne from "@/assets/img/image-3.png";
 import productImageTwo from "@/assets/img/image-2.png";
 import productImageThree from "@/assets/img/image-1.png";
@@ -138,3 +137,6 @@ export function HeroSectionFoodList() {
     </div>
   );
 }
+
+// Add a declaration for 'react-slick'
+declare module 'react-slick';
