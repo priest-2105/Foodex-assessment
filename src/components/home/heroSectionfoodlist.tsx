@@ -1,13 +1,15 @@
-import { ThumbsUp } from 'lucide-react';
-import Slider from "react-slick";
-import type { FoodItem } from "@/types/food";
-import productImageOne from "@/assets/img/image (3).png";
-import productImageTwo from "@/assets/img/image (2).png";
-import productImageThree from "@/assets/img/image (1).png"; 
-import productImageFive from "@/assets/img/e4e2604d03796a699fa8505fbd92d350-removebg-preview.png";
-import PhoneFrame from "@/assets/img/phone-frame.png";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { ThumbsUp } from "lucide-react"
+import Slider from "react-slick"
+import type { FoodItem } from "@/types/food"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
+// Import images
+import productImageFive from "@/assets/img/e4e2604d03796a699fa8505fbd92d350-removebg-preview.png"
+import productImageOne from "@/assets/img/image (3).png"
+import productImageTwo from "@/assets/img/image (2).png"
+import productImageThree from "@/assets/img/image (1).png"
+import PhoneFrame from "@/assets/img/phone-frame.png"
 
 const foodItems: FoodItem[] = [
   {
@@ -50,7 +52,7 @@ const foodItems: FoodItem[] = [
     duration: "25mins",
     isHighlighted: false,
   },
-];
+]
 
 export function HeroSectionFoodList() {
   const settings = {
@@ -89,7 +91,7 @@ export function HeroSectionFoodList() {
         },
       },
     ],
-  };
+  }
 
   return (
     <div className="relative">
@@ -109,16 +111,16 @@ export function HeroSectionFoodList() {
           align-items: flex-end;
         }
       `}</style>
-      
+
       <Slider {...settings}>
         {foodItems.map((item) => (
           <div className="px-2 flex items-end" key={item.id}>
             {item.isHighlighted ? (
               <div className="flex justify-center rounded-xl bg-transparent md-mb-18 py-3 md:h-[500px]">
                 <div className="relative w-full h-full">
-                  <img 
-                    src={item.image || "@/assets/img/phone-frame.png"} 
-                    alt={item.name} 
+                  <img
+                    src={item.image || "/placeholder.svg"}
+                    alt={item.name}
                     className="object-contain w-full h-full"
                   />
                 </div>
@@ -127,10 +129,10 @@ export function HeroSectionFoodList() {
               <div className="bg-white py-2 mb-5 rounded-xl text-start px-2 cursor-pointer w-full">
                 <div className="flex justify-center rounded-xl bg-[#d6d5ca44] py-3 mb-4">
                   <div className="relative w-32 h-32 rounded-full overflow-hidden">
-                    <img 
-                      src={item.image || "@/assets/img/Home-new-01.png"} 
-                      alt={item.name} 
-                      className="object-cover w-full h-full" 
+                    <img
+                      src={item.image || "/placeholder.svg"}
+                      alt={item.name}
+                      className="object-cover w-full h-full"
                     />
                   </div>
                 </div>
@@ -154,5 +156,6 @@ export function HeroSectionFoodList() {
         ))}
       </Slider>
     </div>
-  );
+  )
 }
+
