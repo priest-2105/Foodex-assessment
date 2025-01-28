@@ -64,30 +64,36 @@ export function HeroSectionFoodList() {
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
-    centerMode: false,
+    centerMode: true,
+    centerPadding: "10%",
+    className: "items-end",
     responsive: [
       {
         breakpoint: 1204,
         settings: {
           slidesToShow: 3,
+          centerPadding: "5%",
         },
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
+          centerPadding: "5%",
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          centerPadding: "5%",
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          centerPadding: "5%",
         },
       },
     ],
@@ -114,41 +120,33 @@ export function HeroSectionFoodList() {
 
       <Slider {...settings}>
         {foodItems.map((item) => (
-          <div className="px-2 flex items-end" key={item.id}>
+          <div className="p-2 flex items-end" key={item.id}>
             {item.isHighlighted ? (
-              <div className="flex justify-center rounded-xl bg-transparent md-mb-18 py-3 md:h-[500px]">
-                <div className="relative w-full h-full">
-                  <img
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.name}
-                    className="object-contain w-full h-full"
-                  />
+              <div className="flex justify-center rounded-xl bg-transparent py-3 mb-4">
+                <div className="relative w-full h-[500px] overflow-hidden">
+                  <img src={item.image || "@/assets/img/phone-frame.png"} alt={item.name} className="object-contain w-full h-full" />
                 </div>
               </div>
             ) : (
-              <div className="bg-white py-2 mb-5 rounded-xl text-start px-2 cursor-pointer w-full">
+              <div
+                className={`bg-white py-2 rounded-xl text-start px-2 cursor-pointer transition-all duration-300 ${
+                  item.isHighlighted ? "h-96" : "h-fit"
+                } flex flex-col justify-end`}
+              >
                 <div className="flex justify-center rounded-xl bg-[#d6d5ca44] py-3 mb-4">
                   <div className="relative w-32 h-32 rounded-full overflow-hidden">
-                    <img
-                      src={item.image || "/placeholder.svg"}
-                      alt={item.name}
-                      className="object-cover w-full h-full"
-                    />
+                    <img src={item.image || "@/assets/img/Home-new-01.png"} alt={item.name} className="object-cover w-full h-full" />
                   </div>
                 </div>
-                <h3 className="font-bold py-1 text-sm mb-1 text-start font-pangram md:line-clamp-2 max-md:text-xs  max-md:font-bold  max-md:w-48">
-                  {item.name}
-                </h3>
-                <span className="text-[#49280F] py-1 px-2 text-[8px] rounded-full inline-block bg-[#D6D5CA] text-start font-pangram">
-                  🍲 Continental
-                </span>
-                <div className="flex py-1 justify-between items-center text-xs mt-2 text-gray-600 mb-3">
-                  <div className="flex items-center gap-1">
+                <h3 className="font-bold py-1 text-sm mb-1 text-start font-pangram line-clamp-2">{item.name}</h3>
+                <span className="text-[#49280F] py-1 px-2 text-[8px] rounded-full h-fit bg-[#D6D5CA] text-start ml-0 font-pangram">🍲 Continental</span>
+                <div className="flex py-1 justify-between items-center text-xs h-fit mt-2 text-gray-600 mb-3">
+                  <div className="flex items-center gap-1 h-max">
                     <ThumbsUp className="w-3 h-3" />
-                    <span className="font-sofia-sans">{item.duration}</span>
+                    <span className="font-sofia-sans -mb-1">{item.duration}</span>
                   </div>
                   <div className="p-[2.5px] bg-[#858786] rounded-full"></div>
-                  <span className="font-semibold">Approx. {item.price}</span>
+                  <span className="font-semibold h-max">Approx. {item.price}</span>
                 </div>
               </div>
             )}
@@ -156,6 +154,8 @@ export function HeroSectionFoodList() {
         ))}
       </Slider>
     </div>
-  )
+  );
 }
 
+// Add a declaration for 'react-slick'
+declare module 'react-slick';
