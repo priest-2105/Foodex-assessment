@@ -1,6 +1,7 @@
 import { motion, useAnimation } from "framer-motion"
 import { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
+import type { SVGProps } from "react";
 import GemIcon from "../../assets/icons/gem"
 import Cloud from "../../assets/vectors/cloud"
 import WideCloud from "../../assets/vectors/wide-cloud"
@@ -213,4 +214,20 @@ export function FeatureSection() {
       </div>
     </section>
   )
+}
+
+
+declare module "../../assets/icons/gem" {
+  const content: React.FC<SVGProps<SVGSVGElement>>;
+  export default content;
+}
+
+declare module "../../assets/vectors/cloud" {
+  const content: React.FC<SVGProps<SVGSVGElement>>;
+  export default content;
+}
+
+declare module "../../assets/vectors/wide-cloud" {
+  const content: React.FC<SVGProps<SVGSVGElement>>;
+  export default content;
 }
