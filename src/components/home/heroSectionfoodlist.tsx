@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { ThumbsUp } from "lucide-react"
 import Slider from "react-slick"
 import type { FoodItem } from "@/types/food"
@@ -72,31 +73,40 @@ export function HeroSectionFoodList() {
         breakpoint: 1204,
         settings: {
           slidesToShow: 3,
-          centerPadding: "5%",
         },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          centerPadding: "5%",
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          centerPadding: "5%",
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          centerPadding: "5%",
         },
       },
     ],
+  }
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    }),
   }
 
   return (
@@ -119,12 +129,23 @@ export function HeroSectionFoodList() {
       `}</style>
 
       <Slider {...settings}>
-        {foodItems.map((item) => (
-          <div className="p-2 flex items-end" key={item.id}>
+        {foodItems.map((item, index) => (
+          <motion.div
+            className="p-2 flex items-end"
+            key={item.id}
+            variants={cardVariants}
+            initial="hidden"
+            animate="visible"
+            custom={index}
+          >
             {item.isHighlighted ? (
               <div className="flex justify-center rounded-xl bg-transparent py-3 mb-4">
                 <div className="relative w-full h-[500px] overflow-hidden">
-                  <img src={item.image || "@/assets/img/phone-frame.png"} alt={item.name} className="object-contain w-full h-full" />
+                  <img
+                    src={item.image || "@/assets/img/phone-frame.png"}
+                    alt={item.name}
+                    className="object-contain w-full h-full"
+                  />
                 </div>
               </div>
             ) : (
@@ -135,11 +156,17 @@ export function HeroSectionFoodList() {
               >
                 <div className="flex justify-center rounded-xl bg-[#d6d5ca44] py-3 mb-4">
                   <div className="relative w-32 h-32 rounded-full overflow-hidden">
-                    <img src={item.image || "@/assets/img/Home-new-01.png"} alt={item.name} className="object-cover w-full h-full" />
+                    <img
+                      src={item.image || "@/assets/img/Home-new-01.png"}
+                      alt={item.name}
+                      className="object-cover w-full h-full"
+                    />
                   </div>
                 </div>
                 <h3 className="font-bold py-1 text-sm mb-1 text-start font-pangram line-clamp-2">{item.name}</h3>
-                <span className="text-[#49280F] py-1 px-2 text-[8px] rounded-full h-fit bg-[#D6D5CA] text-start ml-0 font-pangram">🍲 Continental</span>
+                <span className="text-[#49280F] py-1 px-2 text-[8px] rounded-full h-fit w-fit bg-[#D6D5CA] text-start ml-0 font-pangram">
+                  🍲 Continental
+                </span>
                 <div className="flex py-1 justify-between items-center text-xs h-fit mt-2 text-gray-600 mb-3">
                   <div className="flex items-center gap-1 h-max">
                     <ThumbsUp className="w-3 h-3" />
@@ -150,12 +177,12 @@ export function HeroSectionFoodList() {
                 </div>
               </div>
             )}
-          </div>
+          </motion.div>
         ))}
       </Slider>
     </div>
-  );
+  )
 }
 
-// Add a declaration for 'react-slick'
-declare module 'react-slick';
+declare module "react-slick"
+

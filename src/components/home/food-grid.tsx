@@ -1,3 +1,6 @@
+import { motion, useAnimation } from "framer-motion"
+import { useEffect } from "react"
+import { useInView } from "react-intersection-observer"
 import { ThumbsUp } from "lucide-react"
 import type { FoodItem } from "@/types/food"
 import productImage from "@/assets/img/Home-new-01.png"
@@ -78,14 +81,45 @@ const foodItems: FoodItem[] = [
 ]
 
 export function FoodGrid() {
+  const controls = useAnimation()
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  })
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible")
+    } else {
+      controls.start("hidden")
+    }
+  }, [controls, inView])
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: (i: number) => ({
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    }),
+  }
+
   return (
-    <div className="grid grid-cols-3 gap-2 sm:gap-4 custom:gap-4">
-      {foodItems.map((item) => (
-        <div
+    <div className="grid grid-cols-3 gap-2 sm:gap-4 custom:gap-4" ref={ref}>
+      {foodItems.map((item, index) => (
+        <motion.div
           key={item.id}
+          custom={index}
+          initial="hidden"
+          animate={controls}
+          variants={cardVariants}
           className={`
-            bg-white rounded-lg sm:rounded-2xl custom:rounded-2xl p-2 sm:p-4 custom:p-4 cursor-pointer transition-all duration-300
-            ${item.isHighlighted ? "opacity-100 scale-105 shadow-lg z-10" : "opacity-40 scale-100"}
+             rounded-lg sm:rounded-2xl custom:rounded-2xl p-2 sm:p-4 custom:p-4 cursor-pointer transition-all duration-300
+            ${item.isHighlighted ? "opacity-100 scale-105 shadow-lg z-10 bg-white" : "opacity-5 shadow-none scale-100 bg-[#ffffffa2]"}
           `}
         >
           <div className="flex justify-center mb-2 sm:mb-4 custom:mb-4">
@@ -111,7 +145,7 @@ export function FoodGrid() {
             <div className="p-0.5 sm:p-[2.5px] custom:p-[2.5px] bg-[#858786] rounded-full"></div>
             <span className="font-semibold">Approx. {item.price}</span>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   )
