@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-import { Navigation } from '../home/navigation';
+import { ReactNode } from 'react'; 
 
 interface LayoutProps {
   children: ReactNode;
